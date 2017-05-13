@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class Usuario
 {
@@ -8,7 +7,6 @@ private String nombre;
 public void Usuario(String codigo, String nombre){
     this.codigo=codigo;
     this.nombre=nombre;
-
 }
 public void setCodigo(){
     Scanner tec = new Scanner(System.in);

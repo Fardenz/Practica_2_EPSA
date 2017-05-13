@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class CUsuarios {
-    Usuario[] users = new Usuario[1000];
+    Usuario[] users = new Usuario[100];
     private String usuarios[][] = new String[100][2];
     private int usuariosArray = 0;
 
@@ -31,6 +31,8 @@ public class CUsuarios {
                 } catch (ArrayIndexOutOfBoundsException e) {
                     usuarios[usuariosArray][1] = s2;
                 }
+                users[usuariosArray] = new Usuario(line.substring(0, 3), line.substring(4)); //NO CHUTA xD
+
         }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
