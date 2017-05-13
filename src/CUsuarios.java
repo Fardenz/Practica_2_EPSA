@@ -7,7 +7,33 @@ public class CUsuarios {
     private String usuarios[][] = new String[100][2];
     private int usuariosArray = 0;
 
-    private void buscar() {
+    
+    //Constructor method, so that when we declare a new object of this type this method gets executed
+    //This method basically reads from "usuarios.txt" the input data, the file has to be in the same folder.
+    	public CUsuarios(){
+		try {
+			Scanner in = new Scanner(new FileReader("usuarios.txt"));
+			
+			for(int i=0;in.hasNextLine();i++){
+				String line = in.nextLine();
+				users[i]=new Usuario(line.substring(0,3),line.substring(4));
+				elements++;
+										//Debuging 2m.out.println(s.substring(0,3)+","+s.substring(4));
+			}
+			in.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+    
+ /*   It is not needed to call this method everytime, as our constructor can make that job
+ 
+ 
+ 
+ private void buscar() {
         int j = 0;
         File file = new File("/Users/leandroalbero/IdeaProjects/Practica 2/src/usuarios.txt");
         try {
@@ -38,7 +64,7 @@ public class CUsuarios {
             e.printStackTrace();
         }
         usuariosArray--;
-    }
+    }*/
 
     public String buscar(String codigo) {
         buscar(); //Construye la array de usuarios
