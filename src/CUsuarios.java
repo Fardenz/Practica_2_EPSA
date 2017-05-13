@@ -1,11 +1,9 @@
-import java.util.*;
-
-import epsa.*;
-import sun.java2d.UnixSurfaceManagerFactory;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class CUsuarios {
+    Usuario[] users = new Usuario[1000];
     private String usuarios[][] = new String[100][2];
     private int usuariosArray = 0;
 
