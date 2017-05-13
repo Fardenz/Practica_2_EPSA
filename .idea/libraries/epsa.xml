@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="epsa">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/epsa.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
